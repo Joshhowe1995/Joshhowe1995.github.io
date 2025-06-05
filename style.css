@@ -102,3 +102,29 @@ header p {
 #contact a:hover {
   text-decoration: underline;
 }
+
+/* Tech stack section */
+#tech-stack {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#tech-stack h2 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+#tech-stack ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#tech-stack li {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
+
