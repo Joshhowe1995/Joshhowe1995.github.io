@@ -49,3 +49,28 @@ header p {
   color: #cbd5e1; /* Soft grey-blue */
   line-height: 1.7;
 }
+
+/* Projects section */
+#projects {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #38bdf8; /* Light blue */
+  margin-bottom: 20px;
+}
+
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#projects li {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+}
