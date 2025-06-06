@@ -159,3 +159,34 @@ header p {
   color: #cbd5e1;
   line-height: 1.6;
 }
+
+/* Education section */
+#education {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#education h2 {
+  font-size: 2.5rem;
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.school {
+  margin-bottom: 40px;
+}
+
+.school h3 {
+  font-size: 1.5rem;
+  color: #7dd3fc;
+  margin-bottom: 10px;
+}
+
+.school p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
