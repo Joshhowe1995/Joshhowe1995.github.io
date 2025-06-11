@@ -225,5 +225,19 @@ footer {
   margin-bottom: 10px;
 }
 
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-links a {
+  color: #7dd3fc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
 
 
