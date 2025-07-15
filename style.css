@@ -311,17 +311,47 @@ nav a:hover {
   font-weight: bold;
   color: #fff;
   background: #0f0f0f;
-  border: 2px solid transparent;
-  background-image: linear-gradient(#0f0f0f, #0f0f0f),
-    radial-gradient(circle at top left, #a78bfa, #7dd3fc);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: all 0.3s ease;
+  position: relative;
   text-decoration: none;
-  font-size: 1rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.btn-show-work::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #a78bfa,
+    #7dd3fc,
+    #a78bfa,
+    #7dd3fc,
+    #a78bfa
+  );
+  animation: rotate-border 4s linear infinite;
+  z-index: -2;
+}
+
+.btn-show-work::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0f0f0f;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+@keyframes rotate-border {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .btn-show-work:hover {
-  box-shadow: 0 0 15px #a78bfa;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.7);
   transform: translateY(-2px);
 }
