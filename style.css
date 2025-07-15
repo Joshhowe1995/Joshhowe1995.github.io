@@ -324,9 +324,10 @@ nav a:hover {
   inset: 0;
   padding: 2px;
   border-radius: 12px;
-  background: conic-gradient(from 0deg, #a78bfa, #7dd3fc, #a78bfa);
-  animation: rotateBorder 3s linear infinite;
+  background: conic-gradient(from 0deg at 50% 50%, #a78bfa, #7dd3fc, #a78bfa);
+  animation: rotateBorder 2s linear infinite;
   z-index: -2;
+  transform-origin: center;
 }
 
 .btn-show-work::after {
