@@ -313,7 +313,6 @@ nav a:hover {
   color: #fff;
   text-decoration: none;
   background: #0f0f0f;
-  z-index: 0;
   overflow: hidden;
   border: 2px solid transparent;
 }
@@ -321,29 +320,33 @@ nav a:hover {
 .btn-show-work::before {
   content: "";
   position: absolute;
-  inset: 0;
-  padding: 2px;
-  border-radius: 12px;
-  background: conic-gradient(from 0deg at 50% 50%, #a78bfa, #7dd3fc, #a78bfa);
-  animation: rotateBorder 2s linear infinite;
+  inset: -3px;                   /* extra space around */
+  border-radius: 15px;          /* match outside border */
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #a78bfa,
+    #7dd3fc,
+    #a78bfa,
+    #7dd3fc,
+    #a78bfa
+  );
+  background-size: 200% 200%;
+  animation: rotateGlow 4s linear infinite;
   z-index: -2;
-  transform-origin: center;
+  filter: blur(6px);
 }
 
 .btn-show-work::after {
   content: "";
   position: absolute;
   inset: 2px;
-  border-radius: 10px;
   background: #0f0f0f;
+  border-radius: 10px;
   z-index: -1;
 }
 
-@keyframes rotateBorder {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+@keyframes rotateGlow {
+  to {
     transform: rotate(360deg);
   }
 }
