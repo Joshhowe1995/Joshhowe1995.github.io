@@ -305,14 +305,14 @@ nav a:hover {
 }
 
 .btn-show-work {
+  position: relative;
   display: inline-block;
   padding: 12px 24px;
+  font-weight: 600;
   border-radius: 12px;
-  font-weight: bold;
   color: #fff;
-  background: #0f0f0f;
-  position: relative;
   text-decoration: none;
+  background: #0f0f0f;
   z-index: 0;
   overflow: hidden;
 }
@@ -320,35 +320,45 @@ nav a:hover {
 .btn-show-work::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(
-    from 0deg,
-    #a78bfa,
-    #7dd3fc,
-    #a78bfa,
-    #7dd3fc,
-    #a78bfa
-  );
-  animation: rotate-border 4s linear infinite;
-  z-index: -2;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #a78bfa, #7dd3fc, #a78bfa, #7dd3fc);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(4px);
+  animation: borderGlow 8s linear infinite;
+  border-radius: 14px;
 }
 
 .btn-show-work::after {
   content: "";
   position: absolute;
-  inset: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: #0f0f0f;
   border-radius: 10px;
   z-index: -1;
 }
 
-@keyframes rotate-border {
-  to {
-    transform: rotate(360deg);
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.btn-show-work:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
 }
 
 .btn-show-work:hover {
