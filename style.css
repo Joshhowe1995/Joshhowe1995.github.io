@@ -303,19 +303,25 @@ nav a:hover {
   color: #a78bfa;
   font-weight: 600;
 }
+
 .btn-show-work {
   display: inline-block;
-  margin-top: 30px;
   padding: 12px 24px;
-  background-color: #a78bfa; /* purple */
-  color: #ffffff;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #fff;
+  background: #0f0f0f;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#0f0f0f, #0f0f0f),
+    radial-gradient(circle at top left, #a78bfa, #7dd3fc);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.3s ease;
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
 }
 
 .btn-show-work:hover {
-  background-color: #7c3aed; /* darker purple */
-  transform: translateY(-3px);
+  box-shadow: 0 0 15px #a78bfa;
+  transform: translateY(-2px);
 }
